@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/88e1029574.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+        <div class="wrapper">
+            <%- include('_sideNav.ejs') %>
+
+            <!-- page content  -->
+            <div id="content">
+
+                <nav class="navbar navbar-expand-lg" style="background-color: black;">
+                    <div class="container-fluid">
+
+                        <button style="padding-left: 30px; padding-bottom: 10px" type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fa-solid fa-arrow-left-to-line"></i>
+                            <span></span>
+                        </button>
+                    </div>
+                </nav>
+
+
+                <div style="margin-bottom: 0; padding-bottom: 0">
+                    <img src="/img/visionImg.jpeg" class="visionImg1">
+                    <!--tag line-->
+                    <div id="visionTagLine" class="visionTagLine">
+                        <p class="subTitleFont stack-top" style="padding: 0; margin:0; font-size: 60px">VISION</p>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!--paw prints-->
+                    <div>
+                        <img src="/img/pawPrints2.png" class="visionPaw2" width="200" height="350">
+                    </div>
+
+
+                    <!--content-->
+                    <div class="card shadow-lg" style="margin-bottom:30px;">
+                        <div class="card-body">
+                            <div class="card-text">
+                              <section>
+                                <span class="textFont">Our mission is to rescue and treat the un-owned street animals of Udaipur who have become ill or
+                                    injured, and through their rescue inspire a community to protect and defend the lives of all
+                                    animals. We believe all animals deserve our compassion and protection. We are working for the day
+                                    when all animals' lives are respected for their inherent value, whether dogs, chickens, cows or fish.</span>
+                            </section>
+                            <section>
+                                <span class="textFont">Our planet is in crisis from over-consumption, and the use and abuse of animals contributed tremendously to
+                                    the climate catastrophe and incalculable animal suffering.</span>
+                            </section>
+                            <section>
+                                <span class="textFont">Adoption and rescue is our strategy to immediately relieve suffering and encourage the protection of all animals'
+                                    lives by sharing their incredible stories of recovery and healing.</span>
+                            </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--paw prints-->
+                    <div>
+                        <img src="/img/pawPrints2.png" class="visionPaw1" width="200" height="350">
+                    </div>
+
+                    <!-- content-->
+                    <div class="card shadow-lg" style="margin-bottom:35px;">
+                        <div class="card-body">
+                            <div class="card-text">
+                                <section>
+                                    <span class="textFont">Within a few months, our 40 kennels and two small paddocks became filled with rescued dogs and cats.
+                                        With no village phones, reports of animal problems reached us by word of mouth. But with the arrival of cell phones and
+                                        thanks to ads in the newspapers, leaflet drops in schools and community groups, rescue requests multiplied. More than ever
+                                        before, the lives of animals in Mumbai were being saved.</span>
+                                </section>
+                                <section>
+                                    <span class="textFont">Today, in Badi village, Udaipur, on 3 leased acres, our staff of 100 is joined by volunteers from around the
+                                        world to care for 700 ever-changing animals in our hospital and shelter. Our founding family lives on site
+                                        and is involved in operations and management. Claire leads the management team of professionals in veterinary
+                                        care and organizational administration.</span>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--paw prints-->
+                    <div>
+                        <img src="/img/pawPrints2.png" class="visionPaw2" width="200" height="350">
+                    </div>
+                </div>
+            </div>
+
+            <!-- end of page content  -->
+        </div>
+
+        <script src="/js/sideNav.js" type="text/JavaScript"></script>
+
+    </body>
+
+    <!--footer-->
+    <footer class="text-center text-white" style="background-color: rgba(78, 78, 78, 0.473);">
+        <div class="container p-4 pb-0">
+          <!--social media-->
+          <section class="mb-4">
+            <!--facebook-->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #3b5998;"
+              href="https://www.facebook.com/"
+              role="button"><i class="fab fa-facebook"></i></a>
+
+            <!--twitter-->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #55acee;"
+              href="https://twitter.com/"
+              role="button"><i class="fab fa-twitter"></i></a>
+
+            <!--google-->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #dd4b39;"
+              href="https://accounts.google.com/b/0/AddMailService"
+              role="button"><i class="fab fa-google"></i></a>
+
+            <!--instagram-->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #ac2bac;"
+              href="https://www.instagram.com/"
+              role="button"><i class="fab fa-instagram"></i></a>
+
+            <!--linkedin-->
+            <a
+              class="btn btn-primary btn-floating m-1"
+              style="background-color: #0082ca;"
+              href="https://www.linkedin.com/"
+              role="button"><i class="fab fa-linkedin-in"></i></a>
+          </section>
+        </div>
+
+        <!--copyright-->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright: N011, N050
+        </div>
+      </footer>
+</html>

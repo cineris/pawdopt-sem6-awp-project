@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+
+        Added id: <%= rescue.name %>
+
+        <img src="data:image/<%=rescue.photo.contentType%>;base64,
+                     <%=rescue.photo.data.toString('base64')%>" alt="">
+    </body>
+</html>

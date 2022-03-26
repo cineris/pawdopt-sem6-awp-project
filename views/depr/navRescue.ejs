@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/88e1029574.js" crossorigin="anonymous"></script>
+
+    <!--Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    </head>
+    <body ng-app="" style="background-color: black;">
+
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Popper.JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+        <div class="wrapper">
+            <%- include('_sideNav.ejs') %>
+
+            <!-- page content  -->
+            <div id="content">
+
+                <nav class="navbar navbar-expand-lg" style="background-color: black;">
+                    <div class="container-fluid">
+
+                        <button style="padding-left: 30px; padding-bottom: 10px" type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fa-solid fa-arrow-left-to-line"></i>
+                            <span></span>
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="container contact-form pop">
+                    <div class="contact-image">
+                        <img src="/img/heart.png" alt="rocket_contact"/>
+                    </div>
+                    <form action="/rescue" method="POST" name="myForm">
+                        <h3 class="subTitleFont"><b>Found an Animal?</b></h3>
+                        <p class="textFont" style="padding-bottom:10px; text-align: center; font-size: 17px">Kindly help us in rescuing the animal you found!</p>
+                        <div class="row">
+                            <div class="form-group col-lg-6 spaceBet">
+                                <input type="text" class="form-control" style="border: 1px solid rgb(126, 124, 124)" placeholder="First Name" id="firstName" name="firstName" pattern="^[a-zA-Z]+$" ng-required="true" ng-model="firstName">
+                                <span ng-show="myForm.firstName.$error.pattern" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*First Name can have alphabets only.</span>
+                                <span ng-show="myForm.firstName.$touched && myForm.firstName.$error.required" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*First Name is required.</span>
+                            </div>
+                            <div class="form-group col-lg-6 spaceBet">
+                                <input type="text" class="form-control" style="border: 1px solid rgb(126, 124, 124)" placeholder="Last Name" id="lastName" name="lastName" pattern="^[a-zA-Z]+$" ng-required="true" ng-model="lastName">
+                                <span ng-show="myForm.lastName.$error.pattern" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*Last Name can have alphabets only.</span>
+                                <span ng-show="myForm.lastName.$touched && myForm.lastName.$error.required" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*Last Name is required.</span>
+                            </div>
+                            <div class="form-group col-lg-6 spaceBet">
+                                <input class="form-control" type="email" style="border: 1px solid rgb(126, 124, 124)" placeholder="Email ID" id="mailID" name="mailID" ng-model="mailID" ng-required="true" ng-pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+                                <span ng-show="myForm.mailID.$error.pattern" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*Invalid e-mail.</span>
+                                <span ng-show="myForm.mailID.$touched && myForm.mailID.$error.required" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*E-mail is required.</span>
+                            </div>
+                            <div class="form-group col-lg-6 spaceBet">
+                                <input class="form-control" style="border: 1px solid rgb(126, 124, 124)" placeholder="Contact No." id="phoneNo" name="phoneNo" ng-model="phoneNo" ng-required="true" ng-pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$">
+                                <span ng-show="myForm.phoneNo.$error.pattern" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*Invalid phone no.</span>
+                                <span ng-show="myForm.phoneNo.$touched && myForm.phoneNo.$error.required" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*Phone no. is required.</span>
+                            </div>
+                            <div class="form-group col-lg-12 spaceBet">
+                                <input class="form-control" style="border: 1px solid rgb(126, 124, 124)" placeholder="Location Found At" id="location" name="location" ng-model="location" ng-required="true">
+                                <span ng-show="myForm.location.$touched && myForm.location.$error.required" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*Location is required.</span>
+                            </div>
+                            <p class="spaceBet textFont" style="font-size: 17px">Please attach a picture or video of the endangered animal:</p>
+                            <div>
+                                <input id="rescueFile" name="image" type="file" class="file" data-show-preview="false" ng-model="pix" ng-required="true">
+                                <span ng-show="myForm.pix.$touched && myForm.pix.$error.required" style="color:rgb(204, 71, 71); font-size: 12px;" class="textFont">*Please upload media above.</span>
+                            </div>
+                            <div class="form-group col-lg-6 spaceBet">
+                                <input type="submit" name="btnSubmit" class="btnFoster" value="Apply">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div style="text-align:right;">
+                    <img src="/img/rescueImg2.png" width="210" height="170" style="text-align:right;">
+                </div>
+
+            </div>
+
+            <!-- end of page content  -->
+        </div>
+
+        <script src="/js/sideNav.js" type="text/JavaScript"></script>
+
+    </body>
+</html>

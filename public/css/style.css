@@ -1,0 +1,290 @@
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=EB+Garamond&family=Montserrat:ital,wght@1,200&family=Hubballi&family=Tangerine&display=swap');
+
+.titleFont{
+    font-family: 'Tangerine', cursive;
+    font-size: 45px;
+}
+
+.navFont{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.subTitleFont{
+    font-family: 'Hubballi', cursive;
+}
+
+.textFont {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+}
+
+.subTextFont{
+    font-family: 'Amatic SC', cursive;
+}
+
+/* side nav bar */
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+
+  /*  ADDITIONAL DEMO STYLE, NOT IMPORTANT TO MAKE THINGS WORK BUT TO MAKE IT A BIT NICER :) */
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+    overflow-x: hidden;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+    background: #272727;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #313131;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #070707;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #272727;
+}
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #272727;
+}
+
+/* home */
+
+
+/* form validations */
+input.ng-invalid{
+    border: rgb(214, 28, 28);
+}
+input.ng-valid {
+    border: rgb(89, 153, 89);
+}
+
+
+/* volunteer form
+.formBG{
+
+}*/
+
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 1rem;
+    width: 11%;
+    margin-top: -15%;
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-top: -10%;
+    text-align: center;
+    color: black;
+}
+.contact-form .btnFoster {
+    width: 60%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: black;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+
+}
+.btnFosterSubmit{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+
+.spaceBet{
+    padding-top: 12px;
+}
+
+
+/* vision */
+.visionImg1{
+    width: 100%;
+    margin: 0;
+    padding:0;
+}
+
+.centre-left{
+    position: absolute;
+    top: 40%;
+    left: 40px;
+    background-color: yellow;
+}
+
+.centre-left .p{
+    padding: 10px;
+}
+
+.visionTagLine{
+    width: 260px;
+    height: auto;
+    text-align: center;
+    border: 1px solid white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top:0px;
+    background-color: black;
+    position: absolute;
+    z-index: 10;
+    top: 50px;
+    left: 50%;
+}
+
+.visionTagLine.active {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
+}
+
+.visionPaw1{
+    transform: rotate(235deg);
+    object-fit: cover;
+    margin-left: 570px;
+    margin-top: -60px;
+}
+
+.visionPaw2{
+    transform: rotate(150deg);
+    object-fit: cover;
+    margin-left: 250px;
+    margin-top: 0px;
+}
+
+.card:hover{
+    box-shadow: 8px 8px 8px rgb(92, 92, 92);
+    transform:scale(0.9);
+}
+
+.card{
+  transition:.4s;
+  text-align: center;
+}
+
+section{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* foster */
+.pop:hover{
+    transform: scale(0.9);
+}
+
+.pop{
+    transition: 0.3s;
+}
+
+.bgTrail{
+    background-image: url("/Users/shiv/Documents/AWP | PawDopt/bgTrail.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+/* donation form */
+.btn1{
+    width: 100%;
+    height:100%;
+    align-items: center;
+}
+
+.btn2{
+    width: 50%;
+    height:100%;
+}
+
+.alignBtn{
+    margin-left: 42.3%;
+    text-align: center;
+    align-items: center;
+}
+
+.separator{
+    border: 0.4px solid black;
+}
